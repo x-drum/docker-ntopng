@@ -1,8 +1,10 @@
 # xdrum/docker-ntopng
-# ntopng and nprobe container
+# ntopng container
 
-A ntopng/nprobe container based on lucaderi/ntopng-docker and Ubuntu 14:04 images
+A ntopng container based on lucaderi/ntopng-docker and Ubuntu 14:04 images
 
+## Notes
+* by default the container will expose the ntopng webinterface on port tcp/3000.
 
 ## Usage
 
@@ -11,7 +13,5 @@ $ docker run -ti --rm --net=host xdrum/ntopng
 ```
 
 ```bash
-$ docker run -ti --rm --net=host -e WEB_PORT=8000 -e COLLECTOR_PORT=6543
+$ docker run -ti --rm --net=host -e WEB_PORT=8000 xdrum/ntopng
 ```
-
-Note that by default the container will expose ntopng webinterface on port tcp/3000 and the nprobe collector on port udp/6343.
